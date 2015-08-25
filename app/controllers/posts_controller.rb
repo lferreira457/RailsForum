@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
 
 	def index
+		@posts = Post.all.order("created_at DESC")
 	end
 
 	def show
@@ -17,7 +18,7 @@ class PostsController < ApplicationController
 		@post = Post.new(post_params)
 
 		if @post.save
-			redirect_to @post
+			redirect_to root_path
 		else
 			render 'new'
 		end
