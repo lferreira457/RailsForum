@@ -4,6 +4,7 @@
 		%p.comment_author
 			from
 			= comment.user.email if comment.user
-	.buttons
-		= link_to "Edit", edit_post_comment_path(comment.post, comment)
-		= link_to "Delete", [comment.post, comment], method: :delete, data: {confirm: "are you sure?"}
+	- if comment.user == current_user
+		.buttons
+			= link_to "Edit", edit_post_comment_path(comment.post, comment)
+			= link_to "Delete", [comment.post, comment], method: :delete, data: {confirm: "are you sure?"}

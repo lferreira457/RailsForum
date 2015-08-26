@@ -1,4 +1,8 @@
 class CommentsController < ApplicationController
+
+	before_action :handle_unauthorized_users, only: [:edit, :update, :destroy]
+	before_action :authenticate_user!
+
 	def create
 		@post = Post.find(params[:post_id])
 		@comment = @post.comments.create(params[:comment].permit(:comment))
@@ -14,7 +18,6 @@ class CommentsController < ApplicationController
 	def edit
 		@post = Post.find(params[:post_id])
 		@comment = @post.comments.find(params[:id])
-
 	end
 
 	def update
@@ -33,5 +36,14 @@ class CommentsController < ApplicationController
 		@comment = @post.comments.find(params[:id])
 		@comment.destroy
 		redirect_to post_path(@post)
+	end
+
+
+	private
+
+	def handle_unauthorized_users
+		if(@comment.user != current_user)
+			redirect_to post_path(@post)
+		end
 	end
 end
