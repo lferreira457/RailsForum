@@ -88,6 +88,18 @@ header{
 	}
 }
 
+.button{
+	text-decoration: none;
+	color:#397cac;
+	border: 1px solid #397cac;
+	padding: 0.5em 1em;
+	border-radius: 0.2em;
+	display: inline-block;
+	margin-bottom: 5px;
+	text-align: center;
+	min-width:40px;
+}
+
 #post_content{
 	background: #fff;
 	padding: 2em 5%;
@@ -102,5 +114,59 @@ header{
 		color: #333;
 		font-size: 0.9rem;
 		line-height: 1.5rem;
+	}
+	#comments{
+		.comment{
+			border-bottom: 1px solid #ddd;
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+
+			.content{
+				width: 85%;
+				float: left;
+			}
+			.buttons{
+				width:15%;
+				float: left;
+				font-size: 0.8em;
+				text-align: right;
+				a{
+					text-decoration: none;
+					color:#397cac;
+					border: 1px solid #397cac;
+					padding: 0.5em 1em;
+					border-radius: 0.2em;
+					display: inline-block;
+					margin-bottom: 5px;
+					text-align: center;
+					min-width:40px;
+				}
+			}
+			.comment_content{
+				margin: 0;
+				padding: 0;
+			}
+			.comment_author{
+				color:#397cac;
+				margin-top: 0.5rem;
+				font-size: 0.6em;
+				font-weight: 700;
+			}
+		}
+	}
+	textarea{
+		width: 100%;
+		min-height: 200px;
+		border: 1px solid #ddd;
+		border-radius: 0.2em;
+		margin: 1em 0; 
+	}
+	input[type="submit"]{
+		background: #397cac;
+		border: none;
+		color: #fff;
+		font-weight: 100;
+		padding: 0.5em 1em;
+		border-radius: 0.2em;
 	}
 }
