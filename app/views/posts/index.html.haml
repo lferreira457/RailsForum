@@ -7,3 +7,6 @@
 				= time_ago_in_words(post.created_at)
 				by
 				= post.user.email
+			%p.category
+				category :
+				= post.category.title if post.category
