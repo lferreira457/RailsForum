@@ -1,5 +1,5 @@
 = simple_form_for @post do |f|
 	= f.input :title
 	= f.input :content
-	= f.input :category, collection: Category.all.order('title')
+	= f.input :category_id, collection: @categories, label_method: :title, value_method: :id
 	= f.submit
