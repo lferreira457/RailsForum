@@ -1,0 +1,12 @@
+#category-title
+    %h2= @category.title
+
+#posts
+    - @posts.each do |post|
+        .post
+            %h2.title= link_to post.title, post
+            %p.date
+                published : 
+                = time_ago_in_words(post.created_at)
+                by
+                = post.user.email
