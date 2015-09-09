@@ -1,20 +1,22 @@
 #post_content
-	%h1= @post.title
-	%p= @post.content
+	.comment.clearfix
+		.profile
+			%p.comment_author
+				from: 
+				= @post.user.email
+		.content
+			%h1= @post.title
+			%p= @post.content
 
-	%small
-		from: 
-		= @post.user.email
-	%hr/
-	%br/
-	-if @post.user == current_user
-		= link_to "Edit", edit_post_path(@post), class: "button"
-		= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "button"
+			%p
+				post-replies: 
+				= @post.comments.count
+		
+			-if @post.user == current_user
+				= link_to "Edit", edit_post_path(@post), class: "button"
+				= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "button"
 
 	#comments
-		%p
-			post-replies: 
-			= @post.comments.count
 		= render @post.comments
 
 		%h3 reply to thread
