@@ -1,0 +1,193 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  font-family: 'Lato', sans-serif;
+  background: #eee; }
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+header {
+  background: #fff;
+  width: 100%;
+  margin: 0 auto; }
+  header #logo {
+    float: left;
+    text-decoration: none;
+    color: #000; }
+    header #logo p {
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: -1px;
+      font-size: 1.2rem; }
+  header #buttons {
+    float: right; }
+    header #buttons a {
+      line-height: 60px;
+      background: #397cac;
+      padding: 0.5em 1em;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 100;
+      -webkit-transition: 0.3s ease-in-out;
+      -moz-transition: 0.3s ease-in-out;
+      -ms-transition: 0.3s ease-in-out;
+      -o-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out; }
+      header #buttons a:hover {
+        color: #fff;
+        background: #333;
+        border-color: #333; }
+
+#posts {
+  background: #fff;
+  padding: 2em 5%; }
+  #posts .post {
+    margin-top: 1em 0;
+    padding: 1em 0;
+    border-bottom: 1px solid #eee; }
+    #posts .post .title {
+      margin: 0; }
+      #posts .post .title a {
+        color: #397cac;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 1.25rem; }
+    #posts .post .date {
+      margin-top: 0.25rem;
+      font-size: 0.9rem;
+      color: #b2bac2; }
+
+.button {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #397cac;
+  border: 1px solid #397cac;
+  padding: 0.5em 1em;
+  display: inline-block;
+  margin-bottom: 5px;
+  text-align: center;
+  min-width: 40px;
+  float: right;
+  margin-left: 4px;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+  .button:hover {
+    color: #fff;
+    background: #333;
+    border-color: #333; }
+
+#post_content {
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc; }
+  #post_content h1 {
+    font-weight: 100;
+    font-size: 2em;
+    color: #397cac;
+    margin-top: 0; }
+  #post_content p {
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.5rem; }
+  #post_content .comment {
+    border: 1px solid #ddd;
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.21);
+    box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.21); }
+    #post_content .comment .profile {
+      border-right: 1px solid #ddd;
+      background-color: #eee;
+      display: table-cell;
+      width: 120px;
+      padding: 10px; }
+    #post_content .comment .content {
+      display: table-cell;
+      padding: 10px;
+      background-color: #fafafa; }
+    #post_content .comment .buttons {
+      width: 15%;
+      float: left;
+      font-size: 0.8em;
+      text-align: right;
+      width: 100%; }
+      #post_content .comment .buttons a {
+        text-decoration: none;
+        color: #397cac;
+        border: 1px solid #397cac;
+        padding: 0.5em 1em;
+        display: inline-block;
+        margin-bottom: 5px;
+        text-align: center;
+        min-width: 40px;
+        -webkit-transition: 0.3s ease-in-out;
+        -moz-transition: 0.3s ease-in-out;
+        -ms-transition: 0.3s ease-in-out;
+        -o-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out; }
+        #post_content .comment .buttons a:hover {
+          color: #fff;
+          background: #333;
+          border-color: #333; }
+    #post_content .comment .comment_content {
+      margin: 0;
+      padding: 0; }
+    #post_content .comment .comment_author {
+      color: #397cac;
+      margin-top: 0.5rem;
+      font-size: 0.6em;
+      font-weight: 700; }
+  #post_content textarea {
+    width: 97.8%;
+    min-height: 200px;
+    border: 1px solid #ddd;
+    margin: 1em 0;
+    padding: 1%; }
+  #post_content abbr {
+    display: none; }
+  #post_content input[type="submit"] {
+    background: #397cac;
+    border: none;
+    color: #fff;
+    font-weight: 100;
+    padding: 0.5em 1em;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
+    #post_content input[type="submit"]:hover {
+      color: #fff;
+      background: #333;
+      border-color: #333; }
+
+/*# sourceMappingURL=application.css.map */
