@@ -1,8 +1,15 @@
 .comment.clearfix
 	.profile
 		%p.comment_author
-			from
-			= comment.user.email if comment.user
+			from: 
+			= comment.user.username if comment.user
+			%br/
+			posts:
+			= @post.user.posts.count
+			%br/
+			member since:
+			%br/
+			%small= @post.user.created_at.strftime("%d %b. %Y")
 	.content
 		%p.comment_content= comment.comment
 

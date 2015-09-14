@@ -3,14 +3,23 @@
 		.profile
 			%p.comment_author
 				from: 
-				= @post.user.email
+				= @post.user.username
+				%br/
+				posts:
+				= @post.user.posts.count
+				%br/
+				member since:
+				%br/
+				%small= @post.user.created_at.strftime("%d %b. %Y")
 		.content
 			%h1= @post.title
 			%p= @post.content
 
 			%p
-				post-replies: 
-				= @post.comments.count
+				%small
+					post-replies: 
+					= @post.comments.count
+				
 		
 			-if @post.user == current_user
 				= link_to "Edit", edit_post_path(@post), class: "button"
