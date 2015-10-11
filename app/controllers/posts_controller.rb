@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Post.all.order("created_at DESC")
-		# @posts = Post.where(category_id: 1).order("created_at DESC")
+		@categories = Category.all.order("title")
 	end
 
 	def show

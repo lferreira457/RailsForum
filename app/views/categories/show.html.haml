@@ -1,5 +1,13 @@
-#category-title
+#category-title.page-title
     %h2= @category.title
+.categories-dropdown
+    .button.categories
+        Categories
+        .fa.fa-sort-desc
+    .categories-list
+        = link_to "All Categories", posts_path
+        - @categories.each do |category|
+            = link_to category.title, category
 
 #posts
     - @posts.each do |post|

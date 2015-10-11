@@ -34,6 +34,10 @@ body{
 	margin: 0 auto;	
 }
 
+.page-title{
+	display: inline-block;
+}
+
 .clearfix:before, .clearfix:after{
 	content: "";
 	display: table;
@@ -41,6 +45,41 @@ body{
 
 .clearfix:after{
 	clear: both;
+}
+
+.categories-dropdown{
+	display: inline-block;
+	float: right;
+	margin-top: 0.83em;
+	position: relative;
+	.fa{
+		vertical-align: top;
+		margin-top: -1px;
+		padding-left: 73px;
+	}
+}
+
+.categories-list{ 
+	position: absolute;
+	margin-top: 34px;
+    right: 0;
+    display: none;
+	a{
+	    display: block;
+	    background-color: #5B94BD;
+	    width: 150px;
+	    padding: 12px;
+	    text-decoration: none;
+	    border-bottom: 1px solid white;
+	    font-size: 16px;
+	    color: #fff;
+	    @include smooth-transition(0.3s);
+	    &:hover{
+			color:#fff;
+			background:#333;
+			border-color: #333;
+		}
+	}
 }
 
 header{
@@ -106,6 +145,7 @@ header{
 	}
 }
 
+
 .button{
 	font-size: 0.8em;
 	text-decoration: none;
@@ -119,6 +159,7 @@ header{
 	min-width:40px;
 	float: right;
 	margin-left: 4px;
+	cursor: pointer;
 	@include smooth-transition(0.3s);
 	
 	&:hover{
